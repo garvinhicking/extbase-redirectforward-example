@@ -1,0 +1,25 @@
+{
+  "version": "0.1.0",
+  "name": "garvinhicking/redirect-forward-example",
+  "type": "typo3-cms-extension",
+  "description": "",
+  "authors": [
+    {
+      "name": "Garvin Hicking",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "typo3/cms-core": "^13.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "GarvinHicking\\RedirectForwardExample\\": "Classes"
+    }
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "gh_redirectforward_example"
+    }
+  }
+}

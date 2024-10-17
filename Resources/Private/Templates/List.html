@@ -1,0 +1,69 @@
+<p>LIST VIEW</p>
+
+<hr />
+
+<h3>Valid request</h3>
+
+<f:form action="target">
+    <div>
+        <f:form.hidden name="validity" value="valid" />
+    </div>
+
+    <div>
+        General handling:
+        <f:form.select
+            name="handling"
+            options="{'default': 'straight to target', 'redirect': 'use RedirectResponse', 'forward': 'use ForwardResponse'}">
+        </f:form.select>
+    </div>
+
+    <div>
+        PropagateException:
+        <f:form.select
+                name="propagateException"
+                options="{'no': 'no', 'yes': 'yes'}">
+        </f:form.select>
+    </div>
+
+    <div>
+        <f:form.submit value="Go!" />
+    </div>
+</f:form>
+
+<hr />
+
+<h3>Invalid request</h3>
+
+<f:form action="target">
+    <div>
+        <f:form.hidden name="validity[]" value="invalid" />
+    </div>
+
+    <div>
+        Error handling:
+        <f:form.select
+                name="errorHandling"
+                options="{'default': 'default (show native PHP/Extbase error)', 'catch': 'use errormessageAction'}">
+        </f:form.select>
+    </div>
+
+    <div>
+        General handling:
+        <f:form.select
+                name="handling"
+                options="{'default': 'straight to target', 'redirect': 'use RedirectResponse', 'forward': 'use ForwardResponse'}">
+        </f:form.select>
+    </div>
+
+    <div>
+        PropagateException:
+        <f:form.select
+                name="propagateException"
+                options="{'no': 'no', 'yes': 'yes'}">
+        </f:form.select>
+    </div>
+
+    <div>
+        <f:form.submit value="Go!" />
+    </div>
+</f:form>
